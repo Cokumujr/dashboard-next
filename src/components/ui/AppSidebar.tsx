@@ -1,5 +1,5 @@
 
-import { BadgeQuestionMark, Calendar, ChevronDown, ChevronUp, Home, Inbox, Info, LifeBuoy, Plus, Projector, Search, Send, Settings, User2 } from "lucide-react"
+import { Calendar, ChevronDown, ChevronUp, Home, Inbox, Info, LifeBuoy, Plus, Projector, Search, Send, Settings, User2 } from "lucide-react"
 
 import {
     Collapsible,
@@ -58,7 +58,19 @@ const items = [
 const AppSidebar = () => {
     return (
         <Sidebar collapsible="icon">
-            <SidebarHeader className="ml-2"> Cokumu.dev</SidebarHeader>
+            <SidebarHeader>
+                <SidebarMenu>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton asChild>
+                            <Link href="/">
+                                <span >
+                                    Cokumu.dev
+                                </span>
+                            </Link>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                </SidebarMenu>
+            </SidebarHeader>
             <SidebarSeparator />
             <SidebarContent>
                 {/* application group */}
